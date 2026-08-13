@@ -123,6 +123,8 @@ func newDoctorCmd() *cobra.Command {
 			if err != nil {
 				fmt.Println("key: missing")
 				fmt.Println("status: blocked")
+				fmt.Fprintln(os.Stderr, err)
+				os.Exit(2) // auth — hard exit so scripts can rely on non-zero
 				return err
 			}
 			fmt.Printf("key: present (fingerprint %s)\n", c.KeyFingerprint())
