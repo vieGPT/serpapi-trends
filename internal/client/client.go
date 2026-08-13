@@ -36,7 +36,7 @@ func NewFromEnv() (*Client, error) {
 		key = os.Getenv(EnvKeyAlias)
 	}
 	if key == "" {
-		return nil, fmt.Errorf("missing API key: set %s or %s", EnvKeyPrimary, EnvKeyAlias)
+		return nil, fmt.Errorf("auth: missing API key: set %s or %s", EnvKeyPrimary, EnvKeyAlias)
 	}
 	base := os.Getenv(EnvBaseURL)
 	if base == "" {
