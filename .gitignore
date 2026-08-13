@@ -1,0 +1,6 @@
+bin/
+*.db
+*.db-*
+.DS_Store
+dist/
+serpapi-trends
