@@ -1,1 +1,1 @@
-PLACEHOLDER
+file:///tmp/only_main.txt
